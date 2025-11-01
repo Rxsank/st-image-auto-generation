@@ -457,7 +457,7 @@ async function handleIncomingMessage() {
                             // Replace it with an actual image tag
                             const escapedUrl = escapeHtmlAttribute(imageUrl);
                             const escapedPrompt = escapeHtmlAttribute(prompt);
-                            const newImageTag = `<img src="${escapedUrl}" title="${escapedPrompt}" alt="${escapedPrompt}">`;
+                            const newImageTag = `<img src="${escapedUrl}" title="${escapedPrompt}" style="width: 100%; display: block; border-radius: 6px;" alt="${escapedPrompt}">`;
                             message.mes = message.mes.replace(
                                 originalTag,
                                 newImageTag,
